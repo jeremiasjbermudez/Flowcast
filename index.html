@@ -1,1 +1,91 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flowcast – Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 50%, #5b2cdd 0%, #1c0e4e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      color: white;
+    }
+
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(132, 94, 247, 0.2);
+      filter: blur(80px);
+      animation: pulse 6s ease-in-out infinite alternate;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1) translateY(0);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(1.3) translateY(-20px);
+        opacity: 0.3;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .container img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #e0dfff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .glow {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <img src="Flowcast.png" alt="Flowcast Logo" />
+    <h1>Coming Soon</h1>
+    <p>We're building something amazing. Stay tuned.</p>
+  </div>
+</body>
+</html>
+
